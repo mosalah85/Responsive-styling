@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  background: hsl(30, 38%, 92%);
+  padding: 20px;
+}
+.container {
+  max-width: 610px;
+  height: 455px;
+  background: hsl(0, 0%, 100%);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 3px 0px 10px rgba(0, 0, 0, 0.1);
+}
+.prod-img {
+  overflow: hidden;
+  display: flex;
+  height: 100%;
+  width: 50%;
+  position: relative;
+}
+.prod-img img {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100%;
+  object-fit: contain;
+}
+#img-mobile {
+  display: none;
+}
+#img-desktop {
+  display: block;
+}
+.text {
+  width: 50%;
+  height: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+.text #product-type {
+  text-transform: uppercase;
+  letter-spacing: 7px;
+  font-weight: 500;
+  font-size: 12px;
+}
+.product-name,
+.price{
+  font-family: "Fraunces", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "SOFT" 0, "WONK" 0;
+}
+.product-name {
+  margin-top: 20px;
+  font-size: 35px;
+  line-height: 1em;
+}
+#name1{
+  display: block;
+}
+#name2 {
+  display: none;
+}
+.text #product-type,
+.description,
+.price span,
+button {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  color: hsl(228, 12%, 48%);
+}
+.description {
+  margin-top: 20px;
+  line-height: 1.4em;
+  font-weight: 500;
+}
+.price {
+  color: hsl(158, 36%, 37%);
+  font-size: 32px;
+  margin-top: 18px;
+}
+.price span {
+  font-size: 14px;
+  text-decoration: line-through;
+  vertical-align: 0.4em;
+  margin-left: 10px;
+  font-weight: 500;
+}
+button {
+  background: hsl(158, 36%, 37%);
+  color: hsl(30, 38%, 92%);
+  font-weight: 700;
+  border: none;
+  border-radius: 7px;
+  height: 45px;
+  margin-top: 17px;
+  cursor: pointer;
+}
+#add span {
+  font-size: 14px;
+  margin-right: 10px;
+}
+button:hover {
+  background: hsl(158, 36%, 45%);
+}
+button:active {
+  background: hsl(158, 42%, 18%);
+}
+@media (min-width: 500px) and (max-width: 670px) {
+  .container {
+    width: 95%;
+  }
+  .prod-img {
+    width: 45%;
+  }
+  .text {
+    width: 55%;
+    padding: 40px 20px;
+  }
+  .product-name {
+    font-size: 28px;
+  }
+  #name1 {
+    display: none;
+  }
+  #name2 {
+    display: block;
+  }
+  .description{
+    line-height: 1.6em;
+  }
+  .price {
+    color: hsl(158, 36%, 37%);
+    margin-top: 10px;
+    font-size: 30px;
+  }
+  button {
+    margin-top: 12px;
+  }
+}
+@media (min-width: 320px) and (max-width: 500px) {
+  body {
+    padding: 20px;
+  }
+  .container {
+    height: 630px;
+    min-width: 280px;
+    flex-direction: column;
+  }
+  .prod-img {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: visible;
+  }
+  .prod-img img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  #img-mobile {
+    display: block;
+  }
+  #img-desktop {
+    display: none;
+  }
+  .text {
+    width: 100%;
+    height: 60%;
+    padding: 20px;
+    padding-top: 20px;
+  }
+  .product-name {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  #name1 {
+    display: none;
+  }
+  #name2 {
+    display: block;
+  }
+  #description {
+    margin-top: 10px;
+  }
+  .price {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+}
+@media (max-width: 320px){
+  body {
+    padding: 20px;
+    overflow-y: scroll;
+    overflow-x: scroll;
+  }
+  .container {
+    height: 700px;
+    min-width: 280px;
+    flex-direction: column;
+  }
+  .prod-img {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow: visible;
+  }
+  .prod-img img {
+    position: absolute;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  #img-mobile {
+    display: block;
+  }
+  #img-desktop {
+    display: none;
+  }
+  .text {
+    width: 100%;
+    height: 60%;
+    padding: 20px;
+    padding-top: 20px;
+  }
+  .product-name {
+    font-size: 30px;
+  }
+  #name1 {
+    display: none;
+  }
+  #name2 {
+    display: block;
+  }
+  #description {
+    margin-top: 10px;
+  }
+  .price {
+    font-size: 30px;
+  }
+}
+
